@@ -1,0 +1,166 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[french]{babel}
+\usepackage{amsmath, amssymb}
+\usepackage{graphicx}
+\usepackage{geometry}
+\geometry{margin=2cm}
+\usepackage{enumitem}
+\usepackage{float}
+\usepackage{fancyhdr}
+\usepackage{titlesec}
+\usepackage{amsmath}
+\pagestyle{fancy}
+
+% Nettoyer les styles par défaut
+\fancyhf{}
+
+% En-têtes
+\fancyhead[L]{Fiches d'exercices pour Maximilien (4)} % à gauche
+\fancyhead[R]{Matteo Dubresson} % à droite
+
+% Pieds de page
+\fancyfoot[C]{\thepage} % numéro de page centré
+
+%Titre et généralités
+\title{Fiche d'exercices \\ pour Maximilien (4)}
+\date{10/10/2025}
+\author{}
+
+%Espace entre les subsections
+\titlespacing*{\subsection}{0pt}{5ex plus 0.5ex minus 0.2ex}{1.5ex plus 0.2ex}
+
+
+
+
+\begin{document}
+
+\maketitle
+
+\subsection*{Exercice 1 :}
+
+Un carré ne peut pas prendre n'importe quel reste, donc établir la table des restes possibles est le point de départ de nombreuses démonstrations mathématiques. 
+\begin{enumerate}
+    \item Déterminer les restes possibles de $n² \pmod{4}$.
+    \item Déterminer les restes possibles de $n² \pmod{3}$.
+    \item En déduire que si $3~|~n²$, alors $3~|~n$.
+\end{enumerate}
+
+On veut à présent démontrer que l'équation $x² + y² = 2023$ n'a pas de couple d'entier $(x;y)$ solution.
+
+\begin{enumerate}
+    \setcounter{enumi}{3}
+    \item Déterminer les restes possibles de $x² + y² \pmod{4}$.
+    \item Déterminer le reste de $2023 \pmod{4}$. Conclure.
+    \item L'équation $x² + y² = 2026$ a-t-elle des solutions ?
+\end{enumerate}
+
+
+\subsection*{Exercice 2 :}
+
+L'objectif de cet exercice est de démontrer le petit théorème de Fermat ainsi que sa forme alternative : \\
+\textit{Si $p$ est un nombre premier, alors pour $a \in \mathbb{Z}$, $a^p \equiv a \pmod p$.}\\
+\textit{Si $p$ est un nombre premier qui ne divise pas $a$, alors pour $a \in \mathbb{Z}$, $a^{p-1} \equiv 1 \pmod p$.}
+
+    \begin{enumerate}
+        \item Rappeler l'expression de $\dbinom{p}{k}$ sous forme de factorielles pour $0 \le k \le p$.
+        \item Démontrer que pour tout entier $k$ tel que $1 \le k \le p-1$, le nombre premier $p$ divise le coefficient binomial $\dbinom{p}{k}$.
+        \item Soit $n \in \mathbb{N}$. En développant $(n+1)^p$ avec la formule du binôme de Newton, établir que :
+        \[ (n+1)^p \equiv n^p + 1 \pmod p \]
+        \item Démontrer alors par récurrence sur $n$ que pour tout $n \in \mathbb{N}$, $n^p \equiv n \pmod p$.
+        \item On suppose maintenant que $p$ est un nombre premier impair ($p \ge 3$). Soit $a \in \mathbb{Z}^-$. On pose $n = -a \in \mathbb{N}$. 
+        En utilisant la parité de $p$ et le résultat de la question 2.b, montrer que $a^p \equiv a \pmod p$.
+    \end{enumerate}
+    
+    \begin{enumerate}
+        \setcounter{enumi}{5}
+        \item Démontrer finalement que si $p$ ne divise pas $a$, alors $a^{p-1} \equiv 1 \pmod p$. 
+        \item Déterminer le reste de la division euclidienne de $3^{2026}$ par $13$.
+    \end{enumerate}
+
+
+\subsection*{Exercice 3 :}
+
+On définit l'ordre multiplicatif, modulo un entier naturel $n$, d'un entier relatif $a$ premier à $n$, comme le plus petit entier $k > 0$ tel que $a^k \equiv 1 \pmod n$.\\
+Soit $p$ un nombre premier impair. On considère le nombre de Mersenne $M_p = 2^p - 1$.
+
+\begin{enumerate}
+    \item Soit $q$ un facteur premier de $M_p$. Démontrer que $2^p \equiv 1 \pmod q$.
+    \item En déduire l'ordre multiplicatif de $2$ modulo $q$.
+    \item En utilisant le petit théorème de Fermat, établir que $q \equiv 1 \pmod p$.
+    \item Démontrer que $q$ est nécessairement impair, puis en déduire que tout diviseur premier de $M_p$ est de la forme $2kp + 1$ avec $k \in \mathbb{N}^*$.
+\end{enumerate}
+Un nombre de Mersenne est donc très efficace pour tester la primalité des nombres de cette forme. On cherche à déterminer si le nombre $M_{17} = 2^{17} - 1 = 131\,071$ est premier.
+    \begin{enumerate}
+        \setcounter{enumi}{4}
+        \item Sans le résultat de la question 4, jusqu'à quel nombre faudrait-il tester les diviseurs premiers par la méthode classique ?
+        \item En utilisant la question 4, déterminer la liste restreinte des seuls diviseurs premiers $q$ qu'il est nécessaire de tester pour $M_{17}$.
+        \item Conclure sur la primalité de $M_{17}$ en effectuant seulement deux divisions.
+    \end{enumerate}
+
+\subsection*{Exercice 4 :}
+
+On cherche à résoudre dans $\mathbb{Z}^3$ l'équation diophantienne $(E) : x^2 + y^2 = 3z^2$.
+\begin{enumerate}
+    \item Étudier les restes possibles des carrés parfaits modulo $3$.
+    \item Soit $(x, y, z) \in \mathbb{Z}^3$ une solution de $(E)$. En examinant l'équation modulo $3$, montrer que $x$ et $y$ sont nécessairement multiples de $3$.
+    \item On pose $x = 3x'$ et $y = 3y'$ avec $x', y' \in \mathbb{Z}$. Montrer que $z$ est également divisible par $3$.
+    \item En déduire, par la méthode de la descente infinie de Fermat, que l'unique solution de $(E)$ dans $\mathbb{Z}^3$ est le triplet $(0, 0, 0)$.
+    \item Étudier de manière analogue la possibilité d'existence de solutions non triviales pour l'équation $x^2 + y^2 = 7z^2$.
+\end{enumerate}
+
+
+\subsection*{Exercice 5 :}
+
+La suite de Fibonacci $(F_n)_{n \in \mathbb{N}}$ est définie par $F_0 = 0$, $F_1 = 1$ et pour tout $n \in \mathbb{N}$, $F_{n+2} = F_{n+1} + F_n$.
+\begin{enumerate}
+    \item Démontrer par récurrence sur $m$ que pour tous entiers $n \ge 0$ et $m \ge 1$ :
+    \[ F_{m+n} = F_{n-1} F_m + F_n F_{m+1} \]
+    \item En déduire que pour tous entiers $k \ge 1$ et $m \ge 1$, $F_m$ divise $F_{km}$.
+    \item On admet que pour tous entiers $a, b \ge 1$, $\operatorname{pgcd}(F_a, F_b) = F_{\operatorname{pgcd}(a, b)}$.
+    \begin{enumerate}
+        \item Montrer que si $F_n$ est un nombre premier ($n > 4$), alors $n$ est nécessairement un nombre premier.
+        \item La réciproque est-elle vraie ? Justifier par un contre-exemple.
+    \end{enumerate}
+\end{enumerate}
+
+
+\subsection*{Exercice 5 :}
+
+On considère le système de congruences suivant :
+\[ (S) : \begin{cases} x \equiv 2 \pmod 5 \\ x \equiv 4 \pmod 7 \\ x \equiv 1 \pmod 9 \end{cases} \]
+\begin{enumerate}
+    \item Justifier que les modules $5$, $7$ et $9$ sont deux à deux premiers entre eux.
+    \item On pose $M = 5 \times 7 \times 9 = 315$, puis $M_1 = 63$, $M_2 = 45$ et $M_3 = 35$.
+    Pour chaque $i \in \{1, 2, 3\}$, déterminer un entier $y_i$ tel que $M_i y_i \equiv 1 \pmod{m_i}$ (où $m_1=5, m_2=7, m_3=9$).
+    \item En déduire une solution particulière $x_0$ du système $(S)$.
+    \item Donner l'ensemble complet des solutions dans $\mathbb{Z}$ du système $(S)$.
+\end{enumerate}
+
+
+\subsection*{Exercice 6 :}
+
+Pour tout entier $n \ge 1$, on note $R_n = \underbrace{11\dots1}_{n \text{ fois}}$ le $n$-ième nombre repunit en base $10$.
+\begin{enumerate}
+    \item Montrer que pour tout entier $n \ge 1$, $R_n = \dfrac{10^n - 1}{9}$.
+    \item Démontrer que si $a$ et $b$ sont deux entiers naturels non nuls tels que $a$ divise $b$, alors $R_a$ divise $R_b$.
+    \item Montrer que si $p > 3$ est un nombre premier, alors $R_{p-1} \equiv 0 \pmod p$.
+    \item Démontrer qu'aucun repunit $R_n$ (pour $n \ge 2$) ne peut être un carré parfait.
+\end{enumerate}
+
+
+\subsection*{Exercice 7 :}
+
+Soit $n \in \mathbb{N}^*$ un entier s'écrivant en base $10$ sous la forme $n = \overline{a_k a_{k-1} \dots a_1 a_0}$.
+\begin{enumerate}
+    \item Démontrer que $n \equiv \sum_{i=0}^k a_i \pmod 9$.
+    \item En déduire que $n$ est divisible par $9$ si et seulement si la somme de ses chiffres est divisible par $9$.
+    \item On pose $A = 2026^{2026}$. Soit $B$ la somme des chiffres de $A$, $C$ la somme des chiffres de $B$, et $D$ la somme des chiffres de $C$.
+    \begin{enumerate}
+        \item Montrer que $A < 10^{7000}$ et en déduire une majoration de $B$, puis de $C$ et enfin de $D$.
+        \item Déterminer la valeur exacte de $D$.
+    \end{enumerate}
+\end{enumerate}
+
+\end{document}
