@@ -38,7 +38,48 @@
 
 \maketitle
 
+
 \subsection*{Exercice 1 :}
+
+Soit $n$ un entier naturel. On pose $A_n = n^3 - n$.
+
+\begin{enumerate}
+    \item Calculer $A_n$ pour $n$ prenant les valeurs de $0$ à $4$.
+    \item Démontrer que pour tout entier naturel $n$, $A_n$ est divisible par $3$. \textit{(On pourra étudier les restes de la division euclidienne de $n$ par $3$).}
+    \item Démontrer que $A_n$ est également divisible par $2$ pour tout entier naturel $n$.
+    \item En déduire que $A_n$ est divisible par $6$ pour tout entier naturel $n$.
+\end{enumerate}
+
+\subsection*{Exercice 2 :}
+
+Une serrure électronique change de code toutes les heures. La suite des codes $(u_n)$ est définie par $u_0 = 2$ et, pour tout entier naturel $n$, 
+\[ u_{n+1} = 3u_n + 2 \]
+
+\begin{enumerate}
+    \item Calculer $u_1, u_2$ et $u_3$.
+    \item Démontrer par récurrence que pour tout entier naturel $n$, $u_n = 4 \times 3^n - 1$.
+    \item On s'intéresse au reste de la division euclidienne de $u_n$ par $5$.
+    \begin{enumerate}
+        \item Étudier les restes des puissances $3^n$ modulo $5$ selon les valeurs de l'entier $n$.
+        \item En déduire le cycle des restes de $u_n$ modulo $5$ selon les valeurs de $n$.
+        \item Pour quelles valeurs de $n$ le code $u_n$ est-il un multiple de $5$ ?
+    \end{enumerate}
+\end{enumerate}
+
+
+\subsection*{Exercice 3 :}
+
+Soit $n$ un entier naturel non nul. On considère le nombre $N_n = n^5 - n$.
+\begin{enumerate}
+    \item Factoriser $N_n$ sous la forme d'un produit de facteurs du premier degré.
+    \item En étudiant les congruences modulo $2$ et modulo $3$, démontrer que $6$ divise $N_n$ pour tout $n \in \mathbb{N}^*$.
+    \item En utilisant une disjonction de cas selon le reste de $n$ dans la division euclidienne par $5$, démontrer que $5$ divise $N_n$.
+    \item En déduire que $30$ divise $N_n$ pour tout entier naturel $n$.
+    \item Généralisation : Soit $p$ un nombre premier. Énoncer et démontrer la propriété analogue concernant la divisibilité de $n^p - n$ par $p$ (lien direct avec le petit théorème de Fermat).
+\end{enumerate}
+
+
+\subsection*{Exercice 4 :}
 
 Un carré ne peut pas prendre n'importe quel reste, donc établir la table des restes possibles est le point de départ de nombreuses démonstrations mathématiques. 
 \begin{enumerate}
@@ -57,7 +98,20 @@ On veut à présent démontrer que l'équation $x² + y² = 2023$ n'a pas de cou
 \end{enumerate}
 
 
-\subsection*{Exercice 2 :}
+\subsection*{Exercice 5 :}
+
+On cherche à résoudre dans $\mathbb{Z}^3$ l'équation diophantienne $(E) : x^2 + y^2 = 3z^2$.
+\begin{enumerate}
+    \item Étudier les restes possibles des carrés parfaits modulo $3$.
+    \item Soit $(x, y, z) \in \mathbb{Z}^3$ une solution de $(E)$. En examinant l'équation modulo $3$, montrer que $x$ et $y$ sont nécessairement multiples de $3$.
+    \item On pose $x = 3x'$ et $y = 3y'$ avec $x', y' \in \mathbb{Z}$. Montrer que $z$ est également divisible par $3$.
+    \item En déduire, par la méthode de la descente infinie de Fermat, que l'unique solution de $(E)$ dans $\mathbb{Z}^3$ est le triplet $(0, 0, 0)$.
+    \item Étudier de manière analogue la possibilité d'existence de solutions non triviales pour l'équation $x^2 + y^2 = 7z^2$.
+\end{enumerate}
+
+
+
+\subsection*{Exercice 6 :}
 
 L'objectif de cet exercice est de démontrer le petit théorème de Fermat ainsi que sa forme alternative : \\
 \textit{Si $p$ est un nombre premier, alors pour $a \in \mathbb{Z}$, $a^p \equiv a \pmod p$.}\\
@@ -80,9 +134,12 @@ L'objectif de cet exercice est de démontrer le petit théorème de Fermat ainsi
     \end{enumerate}
 
 
-\subsection*{Exercice 3 :}
 
-On définit l'ordre multiplicatif, modulo un entier naturel $n$, d'un entier relatif $a$ premier à $n$, comme le plus petit entier $k > 0$ tel que $a^k \equiv 1 \pmod n$.\\
+
+\subsection*{Exercice Bonus :}
+
+On définit l'ordre multiplicatif, modulo un entier naturel $n$, d'un entier relatif $a$ premier à $n$, comme le plus petit entier $d > 0$ tel que $a^d \equiv 1 \pmod n$.\\
+Une propriété de l'ordre multiplicatif est que si $a^k \equiv 1 \pmod n, k \in \mathbb{N}$, alors l'ordre multiplicatif de $a$, $d$, divise $k$. \\
 Soit $p$ un nombre premier impair. On considère le nombre de Mersenne $M_p = 2^p - 1$.
 
 \begin{enumerate}
@@ -99,68 +156,39 @@ Un nombre de Mersenne est donc très efficace pour tester la primalité des nomb
         \item Conclure sur la primalité de $M_{17}$ en effectuant seulement deux divisions.
     \end{enumerate}
 
-\subsection*{Exercice 4 :}
+% \subsection*{Exercice 3 :}
 
-On cherche à résoudre dans $\mathbb{Z}^3$ l'équation diophantienne $(E) : x^2 + y^2 = 3z^2$.
-\begin{enumerate}
-    \item Étudier les restes possibles des carrés parfaits modulo $3$.
-    \item Soit $(x, y, z) \in \mathbb{Z}^3$ une solution de $(E)$. En examinant l'équation modulo $3$, montrer que $x$ et $y$ sont nécessairement multiples de $3$.
-    \item On pose $x = 3x'$ et $y = 3y'$ avec $x', y' \in \mathbb{Z}$. Montrer que $z$ est également divisible par $3$.
-    \item En déduire, par la méthode de la descente infinie de Fermat, que l'unique solution de $(E)$ dans $\mathbb{Z}^3$ est le triplet $(0, 0, 0)$.
-    \item Étudier de manière analogue la possibilité d'existence de solutions non triviales pour l'équation $x^2 + y^2 = 7z^2$.
-\end{enumerate}
+% On s'intéresse aux puissances successives de l'entier $3$ modulo $7$.
+% \begin{enumerate}
+%     \item Calculer les restes de la division euclidienne de $3^n$ par $7$ pour $n$ allant de $0$ à $6$. Que remarque-t-on ?
+%     \item Démontrer que pour tout entier naturel $n$, $3^{n+6} \equiv 3^n \pmod 7$. En déduire la période de la suite des restes de $3^n$ modulo $7$.
+%     \item Déterminer le reste de la division euclidienne de $3^{2026}$ par $7$.
+%     \item Soit $n \in \mathbb{N}$. On pose $S_n = \sum_{k=0}^{n} 3^{2k}$. 
+%     \begin{enumerate}
+%         \item Exprimer $S_n$ en fonction de $n$ à l'aide d'une formule close (somme d'une suite géométrique).
+%         \item Étudier, selon les valeurs de l'entier $n$ modulo $3$, le reste de $S_n$ dans la division euclidienne par $7$.
+%     \end{enumerate}
+% \end{enumerate}
 
+% \subsection*{Exercice 4 :}
 
-\subsection*{Exercice 5 :}
-
-La suite de Fibonacci $(F_n)_{n \in \mathbb{N}}$ est définie par $F_0 = 0$, $F_1 = 1$ et pour tout $n \in \mathbb{N}$, $F_{n+2} = F_{n+1} + F_n$.
-\begin{enumerate}
-    \item Démontrer par récurrence sur $m$ que pour tous entiers $n \ge 0$ et $m \ge 1$ :
-    \[ F_{m+n} = F_{n-1} F_m + F_n F_{m+1} \]
-    \item En déduire que pour tous entiers $k \ge 1$ et $m \ge 1$, $F_m$ divise $F_{km}$.
-    \item On admet que pour tous entiers $a, b \ge 1$, $\operatorname{pgcd}(F_a, F_b) = F_{\operatorname{pgcd}(a, b)}$.
-    \begin{enumerate}
-        \item Montrer que si $F_n$ est un nombre premier ($n > 4$), alors $n$ est nécessairement un nombre premier.
-        \item La réciproque est-elle vraie ? Justifier par un contre-exemple.
-    \end{enumerate}
-\end{enumerate}
-
-
-\subsection*{Exercice 5 :}
-
-On considère le système de congruences suivant :
-\[ (S) : \begin{cases} x \equiv 2 \pmod 5 \\ x \equiv 4 \pmod 7 \\ x \equiv 1 \pmod 9 \end{cases} \]
-\begin{enumerate}
-    \item Justifier que les modules $5$, $7$ et $9$ sont deux à deux premiers entre eux.
-    \item On pose $M = 5 \times 7 \times 9 = 315$, puis $M_1 = 63$, $M_2 = 45$ et $M_3 = 35$.
-    Pour chaque $i \in \{1, 2, 3\}$, déterminer un entier $y_i$ tel que $M_i y_i \equiv 1 \pmod{m_i}$ (où $m_1=5, m_2=7, m_3=9$).
-    \item En déduire une solution particulière $x_0$ du système $(S)$.
-    \item Donner l'ensemble complet des solutions dans $\mathbb{Z}$ du système $(S)$.
-\end{enumerate}
+% L'objectif de cet exercice est de démontrer qu'il n'existe pas de solution entière à certaines équations diophantiennes en étudiant les restes modulo $7$.
+% \begin{enumerate}
+%     \item Soit $x \in \mathbb{Z}$. 
+%     \begin{enumerate}
+%         \item Dresser la table des restes possibles de $x^2$ modulo $7$.
+%         \item En déduire les restes possibles de la somme de deux carrés $x^2 + y^2$ modulo $7$.
+%     \end{enumerate}
+%     \item On considère l'équation $(E) : x^2 + y^2 = 7z^2$, d'inconnue $(x, y, z) \in \mathbb{Z}^3$.
+%     \begin{enumerate}
+%         \item Démontrer que si $(x, y, z)$ est une solution de $(E)$, alors $x^2 + y^2$ est un multiple de $7$.
+%         \item En déduire que $x$ et $y$ sont nécessairement des multiples de $7$.
+%         \item Poser $x = 7x'$ et $y = 7y'$ pour montrer que $z$ est également un multiple de $7$.
+%     \end{enumerate}
+%     \item À l'aide d'un raisonnement par descente infinie, déterminer toutes les solutions de $(E)$ dans $\mathbb{Z}^3$.
+% \end{enumerate}
 
 
-\subsection*{Exercice 6 :}
 
-Pour tout entier $n \ge 1$, on note $R_n = \underbrace{11\dots1}_{n \text{ fois}}$ le $n$-ième nombre repunit en base $10$.
-\begin{enumerate}
-    \item Montrer que pour tout entier $n \ge 1$, $R_n = \dfrac{10^n - 1}{9}$.
-    \item Démontrer que si $a$ et $b$ sont deux entiers naturels non nuls tels que $a$ divise $b$, alors $R_a$ divise $R_b$.
-    \item Montrer que si $p > 3$ est un nombre premier, alors $R_{p-1} \equiv 0 \pmod p$.
-    \item Démontrer qu'aucun repunit $R_n$ (pour $n \ge 2$) ne peut être un carré parfait.
-\end{enumerate}
-
-
-\subsection*{Exercice 7 :}
-
-Soit $n \in \mathbb{N}^*$ un entier s'écrivant en base $10$ sous la forme $n = \overline{a_k a_{k-1} \dots a_1 a_0}$.
-\begin{enumerate}
-    \item Démontrer que $n \equiv \sum_{i=0}^k a_i \pmod 9$.
-    \item En déduire que $n$ est divisible par $9$ si et seulement si la somme de ses chiffres est divisible par $9$.
-    \item On pose $A = 2026^{2026}$. Soit $B$ la somme des chiffres de $A$, $C$ la somme des chiffres de $B$, et $D$ la somme des chiffres de $C$.
-    \begin{enumerate}
-        \item Montrer que $A < 10^{7000}$ et en déduire une majoration de $B$, puis de $C$ et enfin de $D$.
-        \item Déterminer la valeur exacte de $D$.
-    \end{enumerate}
-\end{enumerate}
 
 \end{document}
